@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    orderList
+    orderPay
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 export default {
-  name: 'OrderList',
+  name: 'OrderPay',
   data () {
     return {
     }

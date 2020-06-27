@@ -1,19 +1,20 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 <template>
   <div class="home">
-    <nav-header></nav-header>
-    <router-view></router-view>
-    <nav-footer></nav-footer>
+    <nav-header />
+    <router-view />
+    <nav-footer />
   </div>
 </template>
 
 <script>
+import NavHeader from './../components/NavHeader'
+import NavFooter from './../components/NavFooter'
 // @ is an alias to /src
-import NavHeader from '@/components/NavHeader.vue'
 export default {
   name: 'Home',
   components: {
-    NavHeader
+    NavHeader,
+    NavFooter
   },
   data () {
     return {
