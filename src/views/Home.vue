@@ -1,39 +1,23 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 <template>
   <div class="home">
-    <img
-      alt="Vue logo"
-      src="../assets/logo.png"
-    >
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <nav-header></nav-header>
+    <router-view></router-view>
+    <nav-footer></nav-footer>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import axios from 'axios'
-import jsonp from 'jsonp'
+import NavHeader from '@/components/NavHeader.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    NavHeader
   },
   data () {
     return {
-      age: 30,
-      data: {}
     }
-  },
-  mounted () {
-    const url = '/?c=be'
-    axios.get(url).then(res => {
-      console.log(res)
-    })
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    jsonp(url, (res) => {
-      console.log(res)
-      this.data = res
-    })
   }
 }
 </script>
